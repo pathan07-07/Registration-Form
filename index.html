@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Registration System</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+
+    <center>
+        <p>Student Registration System</p>
+    </center>
+    <div class="container">
+        <div class="form-section">
+            <form id="studentForm">
+                <label>Name:</label>
+                <input type="text" name="name" required />
+
+                <label>id:</label>
+                <input type="text" name="id" required />
+
+                <label>Email:</label>
+                <input type="email" name="email" required />
+
+                <label>Number:</label>
+                <input type="tel" name="number" required />
+
+
+
+
+
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div class="table-section">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>id</th>
+                        <th>Email</th>
+                        <th>Number</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="studentTableBody">
+                    <!-- Dynamic rows will go here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+
+</html>

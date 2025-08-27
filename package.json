@@ -1,0 +1,23 @@
+{
+  "name": "registration-form",
+  "version": "1.0.0",
+  "description": "This is an Student registration form project created using html ,css and javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pathan07-07/Registration-Form.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pathan07-07/Registration-Form/issues"
+  },
+  "homepage": "https://github.com/pathan07-07/Registration-Form#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
