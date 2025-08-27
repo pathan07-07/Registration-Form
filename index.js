@@ -47,13 +47,13 @@ function addStudentToTable(student) {
     const row = document.createElement("tr");
 
     row.innerHTML = `
-        <td>${student.name}</td>
-        <td>${student.id}</td>
-        <td>${student.email}</td>
-        <td>${student.number}</td>
-        <td>
-            <button class="action-btn edit-btn" ONCLICK="editStudent(this)">Edit</button>
-            <button class="action-btn delete-btn" ONCLICK="deleteStudent(this)">Delete</button>
+        <td data-label="Name">${student.name}</td>
+        <td data-label="id">${student.id}</td>
+        <td data-label="Email">${student.email}</td>
+        <td data-label="Number">${student.number}</td>
+        <td data-label="Action">
+            <button class="action-btn edit-btn" onclick="editStudent(this)">Edit</button>
+            <button class="action-btn delete-btn" onclick="deleteStudent(this)">Delete</button>
         </td>
     `;
         
