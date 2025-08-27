@@ -24,11 +24,21 @@ document.getElementById("studentForm").addEventListener("submit", function (even
 
     // Add student to table
     addStudentToTable(student);
+    // reset the form
     event.target.reset();
 
-    // Save to local storage
+    // Save to local storage with the help of student
     saveStudentToLocalStorage(student);
 });
+
+// Save student to local storage
+
+function saveStudentToLocalStorage(student) {
+    let students = JSON.parse(localStorage.getItem("students")) || [];
+    students.push(student);
+    localStorage.setItem("students", JSON.stringify(students));
+}
+
 
 // Load students from local storage and display in table on page load
 window.addEventListener("DOMContentLoaded", function () {
@@ -36,11 +46,6 @@ window.addEventListener("DOMContentLoaded", function () {
     students.forEach(addStudentToTable);
 });
 
-function saveStudentToLocalStorage(student) {
-    let students = JSON.parse(localStorage.getItem("students")) || [];
-    students.push(student);
-    localStorage.setItem("students", JSON.stringify(students));
-}
 
 function addStudentToTable(student) {
     const tableBody = document.getElementById("studentTableBody");
@@ -66,6 +71,11 @@ function editStudent(button) {
     const id = row.cells[1].innerText;
     const email = row.cells[2].innerText;
     const number = row.cells[3].innerText;
+
+    // Remove the old student from localStorage
+    let students = JSON.parse(localStorage.getItem("students")) || [];
+    students = students.filter(s => !(s.name === name && s.id === id && s.email === email && s.number === number));
+    localStorage.setItem("students", JSON.stringify(students));
 
     const form = document.getElementById("studentForm");
     form.elements["name"].value = name;
