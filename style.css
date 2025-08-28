@@ -22,10 +22,16 @@ p{
 
 .form-section, .table-section {
   background-color: transparent;
-  padding: 20px;;
+  padding: 20px;
   flex: 1 1 400px;
   height: 100%;
 }
+
+.table-section {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
 
 h2 {
   margin-top: 0;
