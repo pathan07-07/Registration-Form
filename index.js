@@ -22,6 +22,19 @@ document.getElementById("studentForm").addEventListener("submit", function (even
         return;
     }
 
+    // Check for duplicate entry
+    let students = JSON.parse(localStorage.getItem("students")) || [];
+    const isDuplicate = students.some(s =>
+        s.name === student.name &&
+        s.id === student.id &&
+        s.email === student.email &&
+        s.number === student.number
+    );
+    if (isDuplicate) {
+        alert("This entry already exists.");
+        return;
+    }
+
     // Add student to table
     addStudentToTable(student);
     // reset the form
