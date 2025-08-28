@@ -98,3 +98,100 @@ table th {
   background-color: #dc3545;
   color: white;
 }
+
+/* Responsive styles for tablet and phone */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    padding: 10px 5px;
+    gap: 10px;
+  }
+  .form-section, .table-section {
+    flex: 1 1 100%;
+    padding: 10px 5px;
+    box-shadow: none;
+  }
+  p {
+    font-size: 32px;
+    margin-top: 10px;
+  }
+  form input, form button {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  form label {
+    font-size: 15px;
+  }
+  table th, table td {
+    padding: 8px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 15px;
+    padding: 0;
+  }
+  p {
+    font-size: 22px;
+    margin-top: 8px;
+  }
+  .container {
+    padding: 2px;
+    gap: 2px;
+  }
+  .form-section, .table-section {
+    padding: 2px;
+    box-shadow: none;
+  }
+  form input, form button {
+    font-size: 15px;
+    margin: 8px 0;
+  }
+  form label {
+    font-size: 14px;
+  }
+  table, thead, tbody, th, td, tr {
+    display: block;
+    width: 100%;
+  }
+  table th {
+    display: none;
+  }
+  table td {
+    border: none;
+    position: relative;
+    padding-left: 45%;
+    min-height: 36px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+  table td:before {
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    width: 40%;
+    white-space: nowrap;
+    font-weight: bold;
+    color: #555;
+    font-size: 13px;
+    content: attr(data-label);
+  }
+  table tr {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+  }
+  .action-btn {
+    width: 100%;
+    margin: 4px 0;
+    font-size: 13px;
+    padding: 6px 0;
+  }
+  .edit-btn, .delete-btn {
+    border-radius: 6px;
+  }
+}
